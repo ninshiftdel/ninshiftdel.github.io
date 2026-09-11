@@ -1,4 +1,4 @@
-/* ----- RESET & BASE ----- */
+/* ===== RESET & BASE ===== */
 *,
 *::before,
 *::after {
@@ -27,7 +27,6 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 100%;
 }
 
 body {
@@ -35,14 +34,10 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
-    margin: 0 auto;
-    background-image: 
-        linear-gradient(rgba(11, 13, 16, 0.85), rgba(11, 13, 16, 0.92)),
-        url('images/Background.png');
+    background-image: linear-gradient(rgba(11, 13, 16, 0.85), rgba(11, 13, 16, 0.92)), url('images/Background.png');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
@@ -74,7 +69,6 @@ body {
 .logo {
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     font-weight: 600;
-    letter-spacing: -0.5px;
     color: var(--text-primary);
     transition: color var(--transition);
 }
@@ -83,15 +77,19 @@ body {
     transition: color var(--transition);
 }
 
+.logo-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+}
+
 .logo-link:hover .logo {
     color: var(--accent);
 }
-
 .logo-link:hover .logo span {
     color: var(--text-primary);
 }
 
-/* ===== HAMBURGER ===== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -112,10 +110,6 @@ body {
     transition: all var(--transition);
 }
 
-.hamburger:hover .bar {
-    background: var(--text-primary);
-}
-
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -126,15 +120,12 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===== NAV LINKS ===== */
 .nav-links {
     display: flex;
     flex-wrap: wrap;
     gap: 1.8rem;
     list-style: none;
     font-size: clamp(0.85rem, 1.2vw, 1rem);
-    font-weight: 450;
-    transition: all 0.3s ease;
 }
 
 .nav-links a {
@@ -160,34 +151,6 @@ body {
     width: 100%;
 }
 
-/* ===== LOGO LINK ===== */
-.logo-link {
-    text-decoration: none !important;
-    border-bottom: none !important;
-    outline: none !important;
-}
-
-.logo-link:hover,
-.logo-link:focus,
-.logo-link:active {
-    text-decoration: none !important;
-    border-bottom: none !important;
-    outline: none !important;
-}
-
-.logo-link::after,
-.logo-link::before {
-    display: none !important;
-    content: none !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-.logo-link .logo,
-.logo-link .logo span {
-    text-decoration: none !important;
-}
-
 /* ===== SECTIONS ===== */
 section {
     margin-bottom: clamp(3rem, 6vw, 5rem);
@@ -205,7 +168,6 @@ section {
 .section-title {
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 600;
-    letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
 }
@@ -215,20 +177,15 @@ section {
 
 /* ===== HERO ===== */
 .hero {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.8rem, 2vw, 1.5rem);
     padding: clamp(1rem, 3vw, 3rem) 0;
 }
 .hero .greeting {
     font-size: clamp(0.85rem, 1.2vw, 1.1rem);
     color: var(--text-secondary);
-    font-weight: 400;
 }
 .hero h1 {
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     font-weight: 700;
-    letter-spacing: -1px;
     line-height: 1.1;
 }
 .hero h1 .accent {
@@ -238,21 +195,12 @@ section {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     color: var(--text-secondary);
     max-width: 680px;
-    margin-top: 0.2rem;
 }
 .hero .bio {
     color: var(--text-secondary);
     max-width: 680px;
     font-size: clamp(1rem, 1.3vw, 1.15rem);
     text-align: justify;
-    text-justify: inter-word;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(0.8rem, 1.5vw, 1.2rem);
-    margin-top: 0.5rem;
 }
 
 .hero-wrapper {
@@ -271,7 +219,6 @@ section {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .profile-frame {
@@ -280,14 +227,8 @@ section {
     border-radius: 50%;
     padding: 4px;
     background: linear-gradient(135deg, var(--accent), var(--accent-hover), #a78bfa);
-    box-shadow: 0 0 40px rgba(91, 154, 255, 0.15), 0 0 80px rgba(91, 154, 255, 0.05);
-    transition: all var(--transition);
+    box-shadow: 0 0 40px rgba(91, 154, 255, 0.15);
     flex-shrink: 0;
-}
-
-.profile-frame:hover {
-    box-shadow: 0 0 60px rgba(91, 154, 255, 0.25), 0 0 120px rgba(91, 154, 255, 0.08);
-    transform: scale(1.02);
 }
 
 .profile-photo {
@@ -297,23 +238,27 @@ section {
     object-fit: cover;
     display: block;
     border: 3px solid var(--bg-primary);
-    background: var(--bg-secondary);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 .btn {
     display: inline-block;
-    padding: clamp(0.5rem, 1vw, 0.8rem) clamp(1.2rem, 2vw, 2rem);
+    padding: 0.7rem 1.8rem;
     border-radius: 50px;
     font-weight: 500;
     font-size: clamp(0.85rem, 1vw, 1rem);
-    border: none;
     cursor: pointer;
     transition: background var(--transition), transform var(--transition);
     background: var(--bg-card);
     color: var(--text-primary);
     border: 1px solid var(--border-subtle);
     text-decoration: none;
-    text-align: center;
 }
 .btn:hover {
     background: var(--bg-card-hover);
@@ -327,12 +272,10 @@ section {
 .btn-primary:hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
-    color: #fff;
 }
 
 .social-inline {
     display: flex;
-    align-items: center;
     gap: 1.2rem;
     margin-top: 0.3rem;
 }
@@ -340,3 +283,131 @@ section {
     color: var(--text-secondary);
     font-size: clamp(1.2rem, 2vw, 1.6rem);
     transition: color var(--transition), transform var(--transition);
+}
+.social-inline a:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 2rem;
+}
+.about-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 2rem;
+    border: 1px solid var(--border-subtle);
+    transition: border var(--transition);
+}
+.about-card:hover {
+    border-color: var(--accent);
+}
+.about-card .role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.about-card .role-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+.about-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.about-card .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.7rem;
+}
+.badge-list span {
+    background: var(--bg-card);
+    padding: 0.2rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 1.5rem;
+}
+.skill-group {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border-subtle);
+    transition: border var(--transition);
+}
+.skill-group:hover {
+    border-color: var(--accent);
+}
+.skill-group h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.6rem;
+}
+.skill-tags span {
+    background: var(--bg-card);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+    transition: all var(--transition);
+}
+.skill-tags span:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+/* ===== EXPERIENCE ===== */
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.exp-item {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    border: 1px solid var(--border-subtle);
+    transition: border var(--transition);
+}
+.exp-item:hover {
+    border-color: var(--accent);
+}
+.exp-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+.exp-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.exp-header .exp-date {
+    font
+
+    
