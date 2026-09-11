@@ -52,7 +52,7 @@ body {
     padding: 0 1.5rem 2rem 1.5rem;
 }
 
-/* ===== STICKY NAVBAR ===== */
+/* ===== NAVBAR ===== */
 .navbar {
     position: sticky;
     top: 0;
@@ -91,7 +91,7 @@ body {
     color: var(--text-primary);
 }
 
-/* ===== HAMBURGER MENU ===== */
+/* ===== HAMBURGER ===== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -340,20 +340,3 @@ section {
     color: var(--text-secondary);
     font-size: clamp(1.2rem, 2vw, 1.6rem);
     transition: color var(--transition), transform var(--transition);
-}
-.social-inline a:hover {
-    color: var(--text-primary);
-    transform: translateY(-2px);
-}
-
-/* ===== ABOUT ===== */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-    gap: clamp(1.2rem, 2vw, 2rem);
-}
-.about-card {
-    background: var(--bg-secondary);
-    border-radius: var(--radius);
-    padding: clamp(1.2rem, 2vw, 2rem);
-    border
