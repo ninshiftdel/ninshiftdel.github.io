@@ -255,11 +255,10 @@
             </div>
         </section>
 
-        <!-- ===== PROJECTS ===== -->
         <section id="projects">
             <div class="section-label">04.</div>
             <h2 class="section-title">Featured <span class="highlight">projects</span></h2>
-
+        
             <div class="filter-tabs">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="soc">SOC</button>
@@ -267,9 +266,9 @@
                 <button class="filter-btn" data-filter="ai">AI & Automation</button>
                 <button class="filter-btn" data-filter="webdev">Web Dev</button>
             </div>
-
+        
             <div class="projects-list">
-
+        
                 <!-- Project: SOC - Phishing investigation -->
                 <div class="project-item" data-category="soc">
                     <div class="exp-header">
@@ -286,10 +285,11 @@
                         <span>Incident Response</span><span>Phishing Analysis</span><span>VirusTotal</span><span>IOC Extraction</span><span>MITRE ATT&CK</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_INCIDENT_REPORT" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Incident Report</a>
+                        <!-- TODO: Add GitHub link when the incident report is published -->
+                        <button class="btn btn-primary btn-pending" disabled>View Incident Report</button>
                     </div>
                 </div>
-
+        
                 <!-- Project: AI - IOC enrichment script -->
                 <div class="project-item" data-category="ai">
                     <div class="exp-header">
@@ -305,10 +305,11 @@
                         <span>Python</span><span>VirusTotal API</span><span>Automation</span><span>Threat Intelligence</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_IOC_SCRIPT" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Code</a>
+                        <!-- TODO: Add GitHub link when the script is published -->
+                        <button class="btn btn-primary btn-pending" disabled>View Code</button>
                     </div>
                 </div>
-
+        
                 <!-- Project: Networking - Layer 2 security -->
                 <div class="project-item" data-category="networking">
                     <div class="exp-header">
@@ -323,10 +324,11 @@
                         <span>Port Security</span><span>DHCP Snooping</span><span>Dynamic ARP Inspection</span><span>Network Defense</span><span>Cisco Packet Tracer</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_L2_SECURITY" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Configuration</a>
+                        <!-- TODO: Add GitHub link when the config files are uploaded -->
+                        <button class="btn btn-primary btn-pending" disabled>View Configuration</button>
                     </div>
                 </div>
-
+        
                 <!-- Project: Networking - VLAN segmentation -->
                 <div class="project-item" data-category="networking">
                     <div class="exp-header">
@@ -343,10 +345,11 @@
                         <span>802.1Q Trunking</span><span>Inter-VLAN Routing</span><span>Access Control Lists</span><span>Troubleshooting</span><span>Cisco Packet Tracer</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_VLAN_LAB" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Configuration</a>
+                        <!-- TODO: Add GitHub link when the config files are uploaded -->
+                        <button class="btn btn-primary btn-pending" disabled>View Configuration</button>
                     </div>
                 </div>
-
+        
                 <!-- Project: Networking - Small office LAN -->
                 <div class="project-item" data-category="networking">
                     <div class="exp-header">
@@ -364,10 +367,11 @@
                         <span>Port Security</span><span>DHCP Snooping</span><span>ACLs</span><span>Static IP Addressing</span><span>Network Defense</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_LAN_LAB" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Configuration</a>
+                        <!-- TODO: Add GitHub link when the config files are uploaded -->
+                        <button class="btn btn-primary btn-pending" disabled>View Configuration</button>
                     </div>
                 </div>
-
+        
                 <!-- Project: Web dev - This portfolio website -->
                 <div class="project-item" data-category="webdev">
                     <div class="exp-header">
@@ -384,10 +388,11 @@
                         <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API Integration</span><span>GitHub Pages</span>
                     </div>
                     <div class="project-actions">
-                        <a href="LINK_TO_GITHUB_PORTFOLIO" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Code</a>
+                        <!-- TODO: Add GitHub link to this portfolio's source code -->
+                        <button class="btn btn-primary btn-pending" disabled>View Code</button>
                     </div>
                 </div>
-
+        
             </div>
         </section>
 
@@ -493,7 +498,7 @@
                 <div class="platform-grid">
 
                     <a href="https://tryhackme.com/p/eth.nin" target="_blank" rel="noopener noreferrer" class="platform-card" data-destination="TryHackMe Profile">
-                        <div class="platform-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="platform-icon"><i class="fas fa-flag"></i></div>
                         <div class="platform-info">
                             <h4>TryHackMe</h4>
                             <p>Active SOC Level 1 path · Log analysis, SIEM, phishing investigations</p>
@@ -501,7 +506,7 @@
                         <i class="fas fa-arrow-up-right-from-square platform-arrow"></i>
                     </a>
 
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card" data-destination="Hack The Box Profile">
+                    <a href="https://profile.hackthebox.com/profile/019f1f70-0d40-72f3-b806-c6e470071868?utm_medium=copy_url" target="_blank" rel="noopener noreferrer" class="platform-card" data-destination="Hack The Box Profile">
                         <div class="platform-icon"><i class="fas fa-cube"></i></div>
                         <div class="platform-info">
                             <h4>Hack The Box</h4>
@@ -510,7 +515,7 @@
                         <i class="fas fa-arrow-up-right-from-square platform-arrow"></i>
                     </a>
 
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="platform-card" data-destination="Blue Team Labs Online">
+                    <a href="https://blueteamlabs.online/home/user/4499dccad441e1cb92caa2" target="_blank" rel="noopener noreferrer" class="platform-card" data-destination="Blue Team Labs Online">
                         <div class="platform-icon"><i class="fas fa-user-shield"></i></div>
                         <div class="platform-info">
                             <h4>Blue Team Labs Online</h4>
